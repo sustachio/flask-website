@@ -37,7 +37,7 @@ def home():
 
 @app.route("/about")
 def about():
-    return render_template('about.html')
+    return render_template('about.html', title='About')
 
 #runs the app w/ debug (auto update)
 if __name__ == '__main__':
