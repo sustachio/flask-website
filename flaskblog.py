@@ -1,6 +1,4 @@
-from flask import Flask
-
-app = Flask(__name__)
+from flask import Flask, render_template
 
 #if you dont feel like running w/ file
     # TO START run this in terminal:
@@ -15,14 +13,31 @@ app = Flask(__name__)
 
 #
 
+app = Flask(__name__)
+
+posts =  [
+    {
+        'author': 'Elen Musk',
+        'title': 'blog post 1',
+        'content': 'tesla',
+        'date': 'April 12, 2009'
+    },
+    {
+        'author': 'lebrohn Jahmez',
+        'title': 'blog post 2',
+        'content': 'basketbell here',
+        'date': 'April 13, 1902'
+    }
+]
+
 @app.route("/")
 @app.route("/home")
 def home():
-    return "<h1>Home Page</h1>"
+    return render_template('home.html',  posts=posts)
 
 @app.route("/about")
 def about():
-    return "<h1>About Page</h1>"
+    return render_template('about.html')
 
 #runs the app w/ debug (auto update)
 if __name__ == '__main__':
