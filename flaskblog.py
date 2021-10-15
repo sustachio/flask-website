@@ -9,9 +9,9 @@ app = Flask(__name__)
     # set FLASK_DEBUG=1                      you dont need to reset evrytime
     # flask run
 
-#if you get a error run this MUST RUN AS ADMIN:
-# netstat -ano | find ":5000"            finds things running on :5000 (:5000 can be replaced w/ any port)
-# TASKKILL /F /PID <process id>          pro id is to far right of prev
+#if you get a error run this MUST RUN AS ADMIN (win 10)
+    # netstat -ano | find ":5000"            finds things running on :5000 (:5000 can be replaced w/ any port)
+    # TASKKILL /F /PID <process id>          pro id is to far right of prev
 
 #
 
