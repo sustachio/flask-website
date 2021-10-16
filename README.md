@@ -1,3 +1,7 @@
+# README
+
+This file will act like notes/a totorial for flask
+
 TO ADD: 
 * explination for code
 * example website (the basic blog w/ no styling)
@@ -16,7 +20,7 @@ TO ADD:
 
 ### Setting up templates
 
-* All templates should be located in a "templates" folder (spelled exactly like that no capitol letters)
+* All templates should be located in a `templates` folder (spelled exactly like that no capitol letters)
 * All template files will be html files
 * Here is how to load a template file from py code:
   * First you will want to import `render_template` from flask with `from flask import Flask, render_template`
@@ -70,7 +74,6 @@ TO ADD:
     {% extends "layout.html" %}
     {% title of group %}
       <h1>{{ title }}</h1>
-    {% endfor %}
     {% endblock optional text for readability %}
     ```
 * This will basicly copy `layout.html`, but replace the `{% title of group %}{% endblock %}` with the h1 tags containing the title variable passed from the py file
@@ -94,3 +97,26 @@ TO ADD:
     </body>
     </html>
     ```
+
+---
+# Static files
+
+### What are they?
+* Static files are files that will always be the same
+* This means no variables
+* This can be used for `css` or `js` files
+
+---
+
+### Setting up static files with flask
+* First you will want to create a folder called `static`, this is where you will have all of your static files.
+* In your `py` file, you will want to import url_for using `from flask import url_for`
+* Then, you will want to include the static file(s) in your `layout.html` by using:
+  * js files:
+  ```html
+  <script src="{{url_for('static', filename='file.js')}}"></script>
+  ``` 
+  * css files:
+  ```html
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='file.css') }}">
+  ```

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
   {% if title %}
     <title>Flask Blog - {{ title }}</title>
   {% else %}
@@ -8,6 +10,12 @@
   {% endif %}
 </head>
 <body>
+  <ul class="top-bar">
+    <li class="bar-item"><span class="title">Flask Blog</span></li>
+    <li class="bar-item"><a href="/">Home</a></li>
+    <li class="bar-item"><a href="/about">About</a></li>
+    <li class="bar-item"><a class="right" href="/login">Login</a></li>
+  </ul>
   {% block content %}{% endblock %}
 </body>
 </html>

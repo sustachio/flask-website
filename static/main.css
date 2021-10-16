@@ -1,0 +1,39 @@
+body {
+    font-family: Helvetica;
+    margin: 0;
+}
+
+ul.top-bar {
+    list-style-type: none;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    overflow: hidden;
+    background-color: CadetBlue;
+}
+
+.right {
+    float: right !important;
+}
+.title {
+    padding: 1rem .3rem;
+    margin-right: 1rem;
+    font-weight: 600;
+}
+li.bar-item a, span {
+    padding: 1rem .3rem;
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    float: left;
+    display: block;
+    color: white;
+}
+
+
+li.bar-item a:hover {
+    text-decoration: underline;
+}
