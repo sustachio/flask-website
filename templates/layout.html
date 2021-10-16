@@ -10,12 +10,14 @@
   {% endif %}
 </head>
 <body>
-  <ul class="top-bar">
-    <li class="bar-item"><span class="title">Flask Blog</span></li>
-    <li class="bar-item"><a href="/">Home</a></li>
-    <li class="bar-item"><a href="/about">About</a></li>
-    <li class="bar-item"><a class="right" href="/login">Login</a></li>
-  </ul>
-  {% block content %}{% endblock %}
+  <div class="top-bar">
+    <span class="bar-item title">Flask Blog</span>
+    <a class="bar-item" href="/">Home</a>
+    <a class="bar-item" href="/about">About</a>
+    <a class="bar-item right" href="/login">Login</a>
+  </div>
+  <div class="main">
+    {% block content %}{% endblock %}
+  </div>
 </body>
 </html>

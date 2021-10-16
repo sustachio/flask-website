@@ -3,37 +3,39 @@ body {
     margin: 0;
 }
 
-ul.top-bar {
-    list-style-type: none;
-    top: 0;
-    margin: 0;
-    padding: 0;
-    padding-left: 5rem;
-    padding-right: 5rem;
+.top-bar {
     overflow: hidden;
     background-color: CadetBlue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
-
-.right {
-    float: right !important;
-}
-.title {
-    padding: 1rem .3rem;
-    margin-right: 1rem;
-    font-weight: 600;
-}
-li.bar-item a, span {
-    padding: 1rem .3rem;
-    text-align: center;
-    font-size: 17px;
-    letter-spacing: 1px;
-    text-decoration: none;
+.bar-item {
     float: left;
     display: block;
     color: white;
+    text-align: center;
+    font-size: 17px;
+    padding: 1rem .3rem;
+    /*letter-spacing: 1px;*/
+    text-decoration: none;
 }
-
+.right {
+    position: relative;
+    float: right;
+    margin-right: 8rem;
+}
+.title {
+    margin-right: 1rem;
+    font-weight: 600;
+}
 
 li.bar-item a:hover {
     text-decoration: underline;
+}
+.main {
+    margin: 3rem;
+    margin-top: 4rem; /* Add a top margin to avoid content overlay */
 }

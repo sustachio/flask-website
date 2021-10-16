@@ -27,6 +27,42 @@ posts =  [
         'title': 'blog post 2',
         'content': 'basketbell here',
         'date': 'April 13, 1902'
+    },
+    {
+        'author': 'Elen Musk',
+        'title': 'blog post 1',
+        'content': 'tesla',
+        'date': 'April 12, 2009'
+    },
+    {
+        'author': 'lebrohn Jahmez',
+        'title': 'blog post 2',
+        'content': 'basketbell here',
+        'date': 'April 13, 1902'
+    },
+    {
+        'author': 'Elen Musk',
+        'title': 'blog post 1',
+        'content': 'tesla',
+        'date': 'April 12, 2009'
+    },
+    {
+        'author': 'lebrohn Jahmez',
+        'title': 'blog post 2',
+        'content': 'basketbell here',
+        'date': 'April 13, 1902'
+    },
+    {
+        'author': 'Elen Musk',
+        'title': 'blog post 1',
+        'content': 'tesla',
+        'date': 'April 12, 2009'
+    },
+    {
+        'author': 'lebrohn Jahmez',
+        'title': 'blog post 2',
+        'content': 'basketbell here',
+        'date': 'April 13, 1902'
     }
 ]
 
