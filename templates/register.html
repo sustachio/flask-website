@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="main">
+    <form class="form" method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form">
+            <legend class="legend">Join Today</legend>
+            <div>
+                {{ form.username.label(class="") }}
+            </div>
+        </fieldset>
+    </form>
+    <small class="muted">
+        Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}"></a>
+    </small>
+  </div>
+{% endblock content %}

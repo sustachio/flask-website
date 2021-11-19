@@ -2,6 +2,19 @@ body {
     font-family: Helvetica;
     margin: 0;
 }
+body:not(.top-bar) {
+    padding-top: 4rem; /* Add a top margin to avoid overlay w/ nav */
+}
+
+legend {
+    width: 100%;
+}
+.form {
+    border-style: solid;
+    border-color: rgb(148, 148, 148);
+    border-radius: 1rem;
+    border-width: .2rem;
+}
 
 .top-bar {
     overflow: hidden;
@@ -19,6 +32,8 @@ body {
     text-align: center;
     font-size: 17px;
     padding: 1rem .3rem;
+    margin-left: .2rem;
+    margin-right: .2rem;
     /*letter-spacing: 1px;*/
     text-decoration: none;
 }
@@ -28,6 +43,7 @@ body {
     margin-right: 8rem;
 }
 .title {
+    margin-left: 0;
     margin-right: 1rem;
     font-weight: 600;
 }
@@ -37,5 +53,15 @@ li.bar-item a:hover {
 }
 .main {
     margin: 3rem;
-    margin-top: 4rem; /* Add a top margin to avoid content overlay */
+    margin-top: 0;
+}
+.underline {
+    border-bottom-style: solid;
+    margin-bottom: 4rem;
+}
+.muted {
+    color: Whitesmoke;
+}
+.ml-2 {
+    margin-left: 2rem;
 }

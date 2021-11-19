@@ -14,7 +14,10 @@
     <span class="bar-item title">Flask Blog</span>
     <a class="bar-item" href="/">Home</a>
     <a class="bar-item" href="/about">About</a>
-    <a class="bar-item right" href="/login">Login</a>
+    <div class="right">
+      <a class="bar-item" href="/login">Login</a>
+      <a class="bar-item" href="/register">Register</a>
+    </div>
   </div>
   <div class="main">
     {% block content %}{% endblock %}
