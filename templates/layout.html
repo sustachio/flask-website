@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   {% if title %}
     <title>Flask Blog - {{ title }}</title>
@@ -10,15 +16,36 @@
   {% endif %}
 </head>
 <body>
-  <div class="top-bar">
-    <span class="bar-item title">Flask Blog</span>
-    <a class="bar-item" href="/">Home</a>
-    <a class="bar-item" href="/about">About</a>
-    <div class="right">
-      <a class="bar-item" href="/login">Login</a>
-      <a class="bar-item" href="/register">Register</a>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">Flask Blog</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+    
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('about') }}">About</a>
+        </li>
+        
+      </ul>
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+        </li>
+
+      </ul>
     </div>
-  </div>
+  </nav>
   <div class="main">
     {% block content %}{% endblock %}
   </div>
